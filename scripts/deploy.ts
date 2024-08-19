@@ -31,7 +31,7 @@ async function main() {
     counter: 100,
     kill_switch:
       "0x05f7151ea24624e12dde7e1307f9048073196644aa54d74a9c579a257214b542",
-    initial_owner: process.env.DEPLOYER_ADDRESS ?? "",
+    initial_owner: process.env.DEPLOYER_ADDRESS!,
   });
   const deployResponse = await account0.declareAndDeploy({
     contract: sierraCode,
